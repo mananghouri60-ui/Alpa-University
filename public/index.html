@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alpa University | AI & Machine Learning</title>
+<meta name="description" content="Alpa University - a Top 10 Pakistan university specialising in Artificial Intelligence and Machine Learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { ink:'#0A0F24', ink2:'#131A38', violet:'#6C4DFF', cyan:'#1FD1E0', paper:'#F5F6FB', amber:'#FFB547' },
+  fontFamily: { display:['Sora','sans-serif'], body:['Inter','sans-serif'] }
+}}}
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-body bg-paper text-ink">
+
+<!-- Mobile top bar -->
+<header class="lg:hidden fixed top-0 inset-x-0 z-40 flex items-center justify-between bg-ink text-white px-4 h-14">
+  <span class="font-display font-bold">Alpa University</span>
+  <button id="menuBtn" aria-label="Open menu" class="p-2"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+</header>
+
+<!-- LEFT SIDEBAR NAV -->
+<aside id="sidebar" class="sidebar fixed left-0 top-0 bottom-0 w-64 bg-ink text-white z-50 flex flex-col -translate-x-full lg:translate-x-0 transition-transform">
+  <a href="#home" class="flex items-center gap-3 px-6 py-6">
+    <span class="logo-mark"></span>
+    <span class="font-display font-bold text-lg leading-tight">Alpa<br><span class="text-cyan text-sm font-medium">University</span></span>
+  </a>
+  <nav class="flex-1 overflow-y-auto px-3 pb-4 text-sm" id="sideNav">
+    <a class="nav-link" href="#home">Home</a>
+    <a class="nav-link" href="#about">About</a>
+    <a class="nav-link" href="#departments">All Departments</a>
+    <p class="nav-group">Main focus</p>
+    <a class="nav-link" href="#dept-ai">Artificial Intelligence</a>
+    <a class="nav-link" href="#dept-ml">Machine Learning</a>
+    <a class="nav-link" href="#dept-ds">Data Science</a>
+    <a class="nav-link" href="#dept-robotics">Robotics</a>
+    <p class="nav-group">Computing</p>
+    <a class="nav-link" href="#dept-se">Software Engineering</a>
+    <a class="nav-link" href="#dept-web">Web Development</a>
+    <a class="nav-link" href="#dept-python">Python Programming</a>
+    <p class="nav-group">Business &amp; Humanities</p>
+    <a class="nav-link" href="#dept-hrm">HRM</a>
+    <a class="nav-link" href="#dept-bba">BBA</a>
+    <a class="nav-link" href="#dept-english">English</a>
+    <a class="nav-link" href="#dept-pak">Pak Studies</a>
+    <p class="nav-group">Sciences</p>
+    <a class="nav-link" href="#dept-physics">Physics</a>
+    <a class="nav-link" href="#dept-chem">Chemistry</a>
+    <a class="nav-link" href="#dept-botany">Botany</a>
+    <p class="nav-group">Campus</p>
+    <a class="nav-link" href="#faculty">Faculty</a>
+    <a class="nav-link" href="#admissions">Admissions &amp; Fees</a>
+    <a class="nav-link" href="#hostel">Hostel</a>
+  </nav>
+  <div class="p-4"><a href="#apply" class="block text-center rounded-xl bg-violet hover:bg-[#5a3df0] py-3 font-semibold transition">Apply Now</a></div>
+</aside>
+<div id="scrim" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"></div>
+
+<main class="lg:ml-64 pt-14 lg:pt-0">
+
+<!-- HERO -->
+<section id="home" class="hero relative overflow-hidden text-white">
+  <canvas id="neural" class="absolute inset-0 w-full h-full"></canvas>
+  <div class="relative z-10 px-6 sm:px-12 py-24 lg:py-36 max-w-3xl">
+    <p class="inline-block rounded-full border border-white/20 bg-white/10 px-4 py-1 text-sm mb-6">Top 10 universities of Pakistan &middot; Co-education</p>
+    <h1 class="font-display font-extrabold text-4xl sm:text-6xl leading-[1.05]">Where machines learn and so do you.</h1>
+    <p class="mt-6 text-lg text-white/75 max-w-xl">Alpa University trains the next generation of AI and Machine Learning engineers with experienced Master's and PhD teachers, real robots and a full campus hostel.</p>
+    <div class="mt-9 flex flex-wrap gap-3">
+      <a href="#apply" class="rounded-xl bg-violet px-7 py-3.5 font-semibold hover:bg-[#5a3df0] transition">Apply for admission</a>
+      <a href="#departments" class="rounded-xl border border-white/30 px-7 py-3.5 font-semibold hover:bg-white/10 transition">Explore departments</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="px-6 sm:px-12 -mt-10 relative z-20">
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="stat"><b>Top 10</b><span>University ranking in Pakistan</span></div>
+    <div class="stat"><b>Rs 75,000</b><span>Fee per semester</span></div>
+    <div class="stat"><b>80%+</b><span>Merit for AI &amp; ML</span></div>
+    <div class="stat"><b>75%</b><span>Attendance for final term</span></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="px-6 sm:px-12 py-20 grid lg:grid-cols-2 gap-12 items-center">
+  <div>
+    <h2 class="h2">An AI-first university with a complete campus.</h2>
+    <p class="mt-5 text-slate-600 leading-relaxed">Alpa University is built around Artificial Intelligence and Machine Learning. Students learn Python, data science and model building, then train real robots in our lab. Alongside our tech programs we offer BBA, HRM, English, Pak Studies, Physics, Chemistry and Botany, so every student gets a well-rounded education.</p>
+    <ul class="mt-6 space-y-3 text-slate-700">
+      <li class="tick">Teachers with teaching experience and Master's or PhD degrees</li>
+      <li class="tick">Hands-on robotics and machine learning labs</li>
+      <li class="tick">Co-educational campus with on-site hostel</li>
+    </ul>
+  </div>
+  <!-- Robot illustration -->
+  <div class="rounded-3xl bg-ink p-8 flex justify-center">
+    <svg viewBox="0 0 320 300" class="w-full max-w-sm" role="img" aria-label="Machine learning robot illustration">
+      <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#6C4DFF"/><stop offset="1" stop-color="#1FD1E0"/></linearGradient></defs>
+      <line x1="160" y1="30" x2="160" y2="60" stroke="#1FD1E0" stroke-width="4"/><circle cx="160" cy="24" r="9" fill="#FFB547"/>
+      <rect x="85" y="60" width="150" height="110" rx="28" fill="url(#g1)"/>
+      <rect x="105" y="85" width="110" height="60" rx="16" fill="#0A0F24"/>
+      <circle cx="137" cy="115" r="12" fill="#1FD1E0"><animate attributeName="r" values="12;9;12" dur="3s" repeatCount="indefinite"/></circle>
+      <circle cx="183" cy="115" r="12" fill="#1FD1E0"><animate attributeName="r" values="12;9;12" dur="3s" repeatCount="indefinite"/></circle>
+      <rect x="95" y="182" width="130" height="90" rx="22" fill="#131A38" stroke="url(#g1)" stroke-width="3"/>
+      <path d="M115 227h22l10-22 14 40 12-26 8 8h24" fill="none" stroke="#1FD1E0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="45" y="190" width="38" height="14" rx="7" fill="#6C4DFF"/><rect x="237" y="190" width="38" height="14" rx="7" fill="#6C4DFF"/>
+    </svg>
+  </div>
+</section>
+
+<!-- DEPARTMENTS -->
+<section id="departments" class="px-6 sm:px-12 py-20 bg-white">
+  <h2 class="h2">All departments</h2>
+  <p class="mt-3 text-slate-600 max-w-2xl">AI and Machine Learning are our main focus. Every other department supports them with strong foundations.</p>
+  <div id="deptGrid" class="mt-10 grid sm:grid-cols-2 xl:grid-cols-3 gap-5"></div>
+</section>
+
+<!-- AI LAB visual -->
+<section class="px-6 sm:px-12 py-20 grid lg:grid-cols-2 gap-10 items-center">
+  <!-- Model training chart -->
+  <div class="rounded-3xl bg-white border border-slate-200 p-6 order-2 lg:order-1">
+    <p class="font-display font-semibold mb-2">Model training: loss vs. epochs</p>
+    <svg viewBox="0 0 400 220" class="w-full" role="img" aria-label="Chart showing model loss decreasing over training epochs">
+      <g stroke="#E2E8F0"><path d="M40 20v170h340"/><path d="M40 60h340M40 105h340M40 150h340" stroke-dasharray="3 5"/></g>
+      <path d="M40 30C80 40 100 90 140 120S220 165 260 172 340 178 380 180" fill="none" stroke="#6C4DFF" stroke-width="4" stroke-linecap="round" class="draw"/>
+      <path d="M40 45C85 60 110 105 150 130S225 170 265 176 340 182 380 184" fill="none" stroke="#1FD1E0" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 8"/>
+      <text x="48" y="14" font-size="11" fill="#64748B">loss</text><text x="350" y="208" font-size="11" fill="#64748B">epochs</text>
+      <circle cx="60" cy="204" r="5" fill="#6C4DFF"/><text x="70" y="208" font-size="11" fill="#475569">training</text>
+      <circle cx="140" cy="204" r="5" fill="#1FD1E0"/><text x="150" y="208" font-size="11" fill="#475569">validation</text>
+    </svg>
+  </div>
+  <div class="order-1 lg:order-2">
+    <h2 class="h2">Learn by training real models and robots.</h2>
+    <p class="mt-5 text-slate-600 leading-relaxed">From your first Python script to training neural networks and robots that learn from data, every semester includes lab work. You build projects you can show to employers.</p>
+    <div class="mt-6 flex flex-wrap gap-2">
+      <span class="chip">Neural Networks</span><span class="chip">Deep Learning</span><span class="chip">Computer Vision</span><span class="chip">NLP</span><span class="chip">Trained Robots</span><span class="chip">Data Science</span>
+    </div>
+  </div>
+</section>
+
+<!-- FACULTY -->
+<section id="faculty" class="px-6 sm:px-12 py-20 bg-ink text-white">
+  <h2 class="h2 !text-white">Teachers who deliver knowledge</h2>
+  <p class="mt-3 text-white/70 max-w-2xl">Every teacher has teaching experience and holds a Master's or PhD qualification.</p>
+  <div id="facultyGrid" class="mt-10 grid sm:grid-cols-2 xl:grid-cols-4 gap-5"></div>
+</section>
+
+<!-- ADMISSIONS -->
+<section id="admissions" class="px-6 sm:px-12 py-20">
+  <h2 class="h2">Admissions &amp; fees</h2>
+  <div class="mt-10 grid lg:grid-cols-3 gap-5">
+    <div class="card"><h3 class="h3">Selection criteria</h3>
+      <ul class="mt-3 space-y-2 text-slate-600 text-sm">
+        <li class="tick">Minimum 65% marks in ICS (Math and Computer included)</li>
+        <li class="tick">Pass the university entry test</li>
+        <li class="tick">AI and ML programs need merit above 80%</li>
+        <li class="tick">Selection chance depends on your qualification</li>
+      </ul></div>
+    <div class="card"><h3 class="h3">Required documents</h3>
+      <ul class="mt-3 space-y-2 text-slate-600 text-sm">
+        <li class="tick">Student CNIC or B-Form</li>
+        <li class="tick">ICS, FCS or Pre-Engineering degree with marks above 65%</li>
+        <li class="tick">Father's CNIC</li>
+      </ul></div>
+    <div class="card bg-violet text-white border-0"><h3 class="h3 !text-white">Semester fee</h3>
+      <p class="font-display font-extrabold text-4xl mt-3">Rs 75,000</p>
+      <p class="mt-2 text-white/80 text-sm">Per semester. 75% attendance is required to sit the final term exam.</p></div>
+  </div>
+</section>
+
+<!-- HOSTEL -->
+<section id="hostel" class="px-6 sm:px-12 py-20 bg-white">
+  <div class="grid lg:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 class="h2">Hostel on campus</h2>
+      <p class="mt-5 text-slate-600 leading-relaxed">Live inside the university. Rooms are fresh and clean, and tasty food is served twice a day: breakfast and dinner.</p>
+      <p class="mt-6 font-display font-extrabold text-4xl">Rs 15,000 <span class="text-base font-medium text-slate-500">per month</span></p>
+    </div>
+    <div class="grid grid-cols-3 gap-3 text-center text-sm">
+      <div class="card"><b class="font-display text-xl block">Fresh</b>rooms</div>
+      <div class="card"><b class="font-display text-xl block">2 meals</b>daily</div>
+      <div class="card"><b class="font-display text-xl block">On-site</b>in university</div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section id="apply" class="px-6 sm:px-12 py-20">
+  <h2 class="h2">Apply for admission</h2>
+  <p class="mt-3 text-slate-600 max-w-2xl">Fill in the form below. Bring your original documents to the entry test.</p>
+  <form id="applyForm" class="mt-10 space-y-8 max-w-4xl" novalidate>
+    <fieldset class="fs"><legend>Program</legend>
+      <label class="lbl">Department you are applying for
+        <select name="program" required class="inp"><option value="">Choose a program</option></select></label>
+    </fieldset>
+
+    <fieldset class="fs"><legend>Student details</legend>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <label class="lbl">Full name<input name="fullName" required class="inp"></label>
+        <label class="lbl">Date of birth<input type="date" name="dob" required class="inp"></label>
+        <label class="lbl">Gender<select name="gender" required class="inp"><option value="">Select</option><option>Male</option><option>Female</option></select></label>
+        <label class="lbl">Student CNIC / B-Form no.<input name="studentCnic" required placeholder="35202-1234567-1" class="inp"></label>
+        <label class="lbl">Phone<input type="tel" name="phone" required class="inp"></label>
+        <label class="lbl">Email<input type="email" name="email" required class="inp"></label>
+        <label class="lbl sm:col-span-2">Home address<input name="address" required class="inp"></label>
+        <label class="lbl">Hostel needed?<select name="hostel" class="inp"><option>No</option><option>Yes</option></select></label>
+      </div>
+    </fieldset>
+
+    <fieldset class="fs"><legend>Father details</legend>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <label class="lbl">Father's name<input name="fatherName" required class="inp"></label>
+        <label class="lbl">Father's CNIC<input name="fatherCnic" required placeholder="35202-1234567-1" class="inp"></label>
+        <label class="lbl">Father's phone<input type="tel" name="fatherPhone" required class="inp"></label>
+        <label class="lbl">Father's occupation<input name="fatherOccupation" class="inp"></label>
+      </div>
+    </fieldset>
+
+    <fieldset class="fs"><legend>Qualification</legend>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <label class="lbl">Degree<select name="degree" required class="inp"><option value="">Select</option><option>ICS</option><option>FCS</option><option>Pre-Engineering</option></select></label>
+        <label class="lbl">Board / institute<input name="board" required class="inp"></label>
+        <label class="lbl">Passing year<input type="number" name="year" min="2015" max="2030" required class="inp"></label>
+        <label class="lbl">Total marks<input type="number" name="totalMarks" min="1" required class="inp"></label>
+        <label class="lbl">Obtained marks<input type="number" name="obtainedMarks" min="0" required class="inp"></label>
+        <div class="lbl">Percentage<div id="pct" class="inp bg-slate-50 font-semibold">&ndash;</div></div>
+      </div>
+      <p id="pctNote" class="mt-3 text-sm text-slate-500"></p>
+    </fieldset>
+
+    <fieldset class="fs"><legend>Documents to bring</legend>
+      <ul class="space-y-2 text-sm text-slate-600">
+        <li class="tick">Student CNIC or B-Form</li><li class="tick">ICS / FCS / Pre-Engineering degree (marks above 65%)</li><li class="tick">Father's CNIC</li>
+      </ul>
+    </fieldset>
+
+    <label class="flex gap-3 text-sm text-slate-600"><input type="checkbox" name="agree" required class="mt-1"> I confirm the information is correct and I accept the 75% attendance rule.</label>
+    <div id="formMsg" role="status" class="hidden rounded-xl p-4 text-sm"></div>
+    <button type="submit" class="rounded-xl bg-violet hover:bg-[#5a3df0] text-white font-semibold px-8 py-3.5 transition">Submit application</button>
+  </form>
+</section>
+
+<footer class="px-6 sm:px-12 py-10 bg-ink text-white/70 text-sm">
+  <p class="font-display font-bold text-white text-lg">Alpa University</p>
+  <p class="mt-1">AI and Machine Learning &middot; Top 10 Pakistan &middot; Co-education</p>
+</footer>
+</main>
+
+<!-- CHAT WIDGET (bottom-right) -->
+<button id="chatToggle" aria-label="Open chat" class="fixed bottom-5 right-5 z-[60] h-14 w-14 rounded-full bg-violet text-white shadow-xl grid place-items-center hover:scale-105 transition">
+  <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.5 7.2L3 21l1.8-5.5A8 8 0 1 1 21 12z"/></svg>
+</button>
+<section id="chatBox" class="chat hidden fixed bottom-24 right-5 z-[60] w-[calc(100vw-2.5rem)] max-w-sm rounded-2xl bg-white shadow-2xl border border-slate-200 flex flex-col overflow-hidden" aria-label="University assistant">
+  <div class="bg-ink text-white px-4 py-3 flex items-center justify-between">
+    <div><p class="font-display font-semibold">Alpa Assistant</p><p class="text-xs text-white/60">Ask about the university</p></div>
+    <button id="chatClose" aria-label="Close chat" class="text-2xl leading-none px-1">&times;</button>
+  </div>
+  <div id="chatLog" class="flex-1 overflow-y-auto p-4 space-y-3 text-sm bg-paper"></div>
+  <div id="chips" class="px-3 pt-2 flex flex-wrap gap-2 bg-paper"></div>
+  <form id="chatForm" class="flex gap-2 p-3 border-t border-slate-200 bg-white">
+    <input id="chatInput" autocomplete="off" maxlength="500" placeholder="Type your question..." class="flex-1 rounded-xl border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-violet">
+    <button class="rounded-xl bg-violet text-white px-4 font-semibold text-sm">Send</button>
+  </form>
+</section>
+
+<script src="js/app.js"></script>
+</body>
+</html>

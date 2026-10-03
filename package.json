@@ -1,0 +1,9 @@
+{
+  "name": "alpa-university",
+  "version": "1.0.0",
+  "description": "Alpa University website with AI chat assistant and admission form",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "express": "^4.19.2" }
+}
